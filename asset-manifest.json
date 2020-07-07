@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bank-of-react/static/css/main.a5993d26.chunk.css",
-    "main.js": "/bank-of-react/static/js/main.0dd2bb55.chunk.js",
-    "main.js.map": "/bank-of-react/static/js/main.0dd2bb55.chunk.js.map",
+    "main.js": "/bank-of-react/static/js/main.024e859e.chunk.js",
+    "main.js.map": "/bank-of-react/static/js/main.024e859e.chunk.js.map",
     "runtime-main.js": "/bank-of-react/static/js/runtime-main.3c3b4ec9.js",
     "runtime-main.js.map": "/bank-of-react/static/js/runtime-main.3c3b4ec9.js.map",
     "static/js/2.a14825f7.chunk.js": "/bank-of-react/static/js/2.a14825f7.chunk.js",
     "static/js/2.a14825f7.chunk.js.map": "/bank-of-react/static/js/2.a14825f7.chunk.js.map",
     "index.html": "/bank-of-react/index.html",
-    "precache-manifest.c5b38eafe446426365d519f7dce502cc.js": "/bank-of-react/precache-manifest.c5b38eafe446426365d519f7dce502cc.js",
+    "precache-manifest.1a75a8357272bac022b2c05ea42f9de8.js": "/bank-of-react/precache-manifest.1a75a8357272bac022b2c05ea42f9de8.js",
     "service-worker.js": "/bank-of-react/service-worker.js",
     "static/css/main.a5993d26.chunk.css.map": "/bank-of-react/static/css/main.a5993d26.chunk.css.map",
     "static/js/2.a14825f7.chunk.js.LICENSE.txt": "/bank-of-react/static/js/2.a14825f7.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3c3b4ec9.js",
     "static/js/2.a14825f7.chunk.js",
     "static/css/main.a5993d26.chunk.css",
-    "static/js/main.0dd2bb55.chunk.js"
+    "static/js/main.024e859e.chunk.js"
   ]
 }
