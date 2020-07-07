@@ -1,0 +1,18 @@
+.nav-bar{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    text-align:center;
+    vertical-align: middle;
+    padding: 10px;
+
+}
+
+
+
+.link:visited{
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
