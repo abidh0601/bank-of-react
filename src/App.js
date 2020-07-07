@@ -119,7 +119,7 @@ class App extends Component{
     return(
       <Router>
         <Switch>
-          <Route exact path='/' render={HomeComponent}/>
+          <Route exact path='/bank-of-react' render={HomeComponent}/>
           <Route exact path='/userProfile' render={UserProfileComponent}/>
           <Route exact path="/login" render={LogInComponent}/>
           <Route exact path="/Debit" render={DebitComponent}/>
