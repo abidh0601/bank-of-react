@@ -31,6 +31,8 @@ class App extends Component{
     
   }
 
+
+  //Calculates total amounts
   calculateTotal = (amounts) => {
     let a = amounts.map(item => parseFloat(item.amount));
     let total = a.reduce((acc,now) => {
@@ -42,14 +44,14 @@ class App extends Component{
   }
 
   
-
+  //Calculates account balance
   calculateBalance= () => {
     let balance = (this.state.creditTotal - this.state.debitTotal).toFixed(2);
     this.setState({accountBalance: balance})
     
   }
 
-
+  //Updates debitData
   updateDebit = (ob) => {
     const data = [...this.state.debitData]
     data.push(ob);
@@ -58,6 +60,8 @@ class App extends Component{
     
   }
 
+
+  //Updates creditData
   updateCredit = (ob) => {
     const data = [...this.state.creditData]
     data.push(ob);
@@ -66,22 +70,28 @@ class App extends Component{
     
   }
 
+  //Recieves info from api and sets states to appropriate values
   async getData(){
-    let debit = await axios.get("https://moj-api.herokuapp.com/debits");
-    let credit = await axios.get("https://moj-api.herokuapp.com/credits");
-    let c = this.calculateTotal(credit.data);
-    let d = this.calculateTotal(debit.data);
+    try{
+      let debit = await axios.get("https://moj-api.herokuapp.com/debits");
+      let credit = await axios.get("https://moj-api.herokuapp.com/credits");
+      let c = this.calculateTotal(credit.data);
+      let d = this.calculateTotal(debit.data);
 
-    this.setState({
-      creditData: credit.data, 
-      debitData: debit.data,
-      creditTotal: c,
-      debitTotal: d,
-      accountBalance: (c - d).toFixed(2),
-    });
-    
+      this.setState({
+        creditData: credit.data, 
+        debitData: debit.data,
+        creditTotal: c,
+        debitTotal: d,
+        accountBalance: (c - d).toFixed(2),
+      });
+    }
+    catch(error){
+      console.log("Unable to get information")
+    }
   }
 
+  //Changes username after login
   mockLogIn = (logInInfo) => {
     
     const newUser = {...this.state.currentUser};
@@ -99,6 +109,7 @@ class App extends Component{
 
   render(){
     
+    //References to components generated in order to pass props
     const HomeComponent = () => (
       <Home accountBalance={this.state.accountBalance} />
     );
@@ -117,6 +128,7 @@ class App extends Component{
     );
 
     return(
+      //All components are routed here
       <Router>
         <Switch>
           <Route exact path='/bank-of-react' render={HomeComponent}/>

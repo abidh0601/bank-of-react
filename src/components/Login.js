@@ -3,7 +3,7 @@ import {Redirect} from 'react-router-dom';
 
 import NavBar from './NavBar';
 
-
+//Login in component used to change username
 class LogIn extends Component {
   constructor () {
     super()
@@ -16,6 +16,7 @@ class LogIn extends Component {
     }
   }
 
+  //changes the state of the username on change in input field
   handleChange = (e) => {
     const updatedUser = {...this.state.user}
     const inputField = e.target.name
@@ -25,6 +26,7 @@ class LogIn extends Component {
     this.setState({user: updatedUser})
   }
 
+  //Passes new username to App component and sets redirect to true
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.mockLogIn(this.state.user)

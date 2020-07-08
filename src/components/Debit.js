@@ -4,7 +4,7 @@ import Navbar from './NavBar';
 import AccountBalance from './AccountBalance'
 
 
-
+//Component that displays all debits
 class Debit extends Component{
     constructor(){
         super();
@@ -19,6 +19,8 @@ class Debit extends Component{
         }
     }
 
+
+    //Handles changes to description and amount on input
     handleChange = (e) => {
         const updateItem = {...this.state.item};
         const inputField = e.target.name;
@@ -31,6 +33,8 @@ class Debit extends Component{
         
     }
 
+
+    //Passes new item object to App for addition to debitData
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.updateDebit(this.state.item);

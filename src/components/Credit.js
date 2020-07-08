@@ -17,6 +17,7 @@ class Credit extends Component{
         }
     }
 
+    //Handles changes to description and amount on input
     handleChange = (e) => {
         const updateItem = {...this.state.item};
         const inputField = e.target.name;
@@ -29,6 +30,7 @@ class Credit extends Component{
         
     }
 
+    //Passes new item object to App component for addition to creditData
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.updateCredit(this.state.item);

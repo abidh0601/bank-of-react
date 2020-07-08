@@ -4,6 +4,8 @@ import React, {Component} from 'react';
 import AccountBalance from './AccountBalance';
 import NavBar from './NavBar';
 
+
+//Home component which displays balance
 class Home extends Component{
     render(){
         return(
